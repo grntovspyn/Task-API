@@ -23,7 +23,7 @@ const taskSchema = {
 }
 
 const Task = mongoose.model("Task", taskSchema);
-//TODO
+
 
 app.route("/api/v1/tasks")
     .get(function(req,res){
@@ -54,8 +54,6 @@ app.route("/api/v1/tasks")
                 res.send(err);
             }
         });
-
-
 
     })
 
@@ -111,7 +109,6 @@ app.route("/api/v1/tasks/:taskName")
             }
         });
     });
-
 
 
 app.listen(3000, function() {
